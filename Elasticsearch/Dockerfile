@@ -25,7 +25,7 @@
 # Set gid=0 and make group perms==owner perms
 ################################################################################
 
-FROM s390x/ubuntu:18.04 AS builder
+FROM quay.io/ibmz/ubuntu:20.04 AS builder
 
 ARG ELASTICSEARCH_VER=7.9.1
 
