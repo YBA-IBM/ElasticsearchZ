@@ -58,11 +58,9 @@ Elasticsearch is a distributed, RESTful search and analytics engine capable of s
 
 The default Elastic distribution is governed by the Elastic License, and includes the [full set of free features](https://www.elastic.co/subscriptions).
 
-The Linux-on-IBM-Z Dockerfile Examples port is governed by the [Apache 2.0 License] Apache License, Version 2.0.
+The Linux-on-IBM-Z Dockerfile Examples port is governed by the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0)
 
 View the detailed release notes [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/es-release-notes.html).
-
-Not the version you're looking for? View all supported [past releases](https://www.docker.elastic.co).
 
 # How to use this image
 
@@ -94,7 +92,7 @@ See [Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elastics
 
 # License
 
-View [license information](https://github.com/elastic/elasticsearch/blob/6.4/licenses/ELASTIC-LICENSE.txt) for the software contained in this image.
+View [Elastic license information](https://github.com/elastic/elasticsearch/blob/6.4/licenses/ELASTIC-LICENSE.txt) and [Apache 2.0 license information](http://www.apache.org/licenses/LICENSE-2.0) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
