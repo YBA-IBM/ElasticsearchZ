@@ -1,4 +1,18 @@
 arch: s390x
 services:
   - docker
-script: docker login quay.io -u $ROBOT_USER -p $ROBOT_TOKEN && docker build Elasticsearch --tag quay.io/ibmz/elasticsearch:7.9.1 && docker push quay.io/ibmz/elasticsearch:7.9.1
+env:
+  global:
+    - TEST_DIR="$PWD"
+    - TEST_SCRIPT="test.sh"
+    - BUILD_DIR="$PWD/Elasticsearch"
+    - REPO="quay.io/ibmz/elasticsearch"
+    - TAG="$REPO:7.9.1"
+before_script: 
+  - cd $TEST_DIR && chmod +x $TEST_SCRIPT
+  - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
+script: 
+  - docker build $BUILD_DIR --tag $TAG
+  - cd $TEST_DIR && bash $TEST_SCRIPT 
+after_script:
+  - docker push $REPO
