@@ -37,7 +37,7 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`7.9.2`](https://github.com/YBA-IBM/ElasticsearchZ/blob/main/Elasticsearch/Dockerfile)
+-	[`7.9.1`](https://github.com/YBA-IBM/ElasticsearchZ/blob/main/Elasticsearch/Dockerfile)
 
 # Quick reference (cont.)
 
