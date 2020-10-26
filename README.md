@@ -1,50 +1,21 @@
 # ElasticsearchZ
 
-This repository contains the files for a linux-on--IBM-Z Elasticsearch from this repository: https://github.com/linux-on-ibm-z/dockerfile-examples
-
-# License
-
-dockerfile-examples is licensed under the Apache License, Version 2.0.
-
-
-<!--
-
-********************************************************************************
-
-WARNING:
-
-    DO NOT EDIT "elasticsearch/README.md"
-
-    IT IS AUTO-GENERATED
-
-    (from the other files in "elasticsearch/" combined with a set of templates)
-
-********************************************************************************
-
--->
-
 # Quick reference
 
--	**Maintained by**:  
-	[the Elastic Team](https://github.com/elastic/elasticsearch)
-  
--	**Port Maintained by**:  
+-	**Build Source**:  
 	[Linux-on-IBM-Z Dockerfile Examples Repo](https://github.com/linux-on-ibm-z/dockerfile-examples)
   
 
 -	**Where to get help**:  
 	the [Elasticsearch Discuss Forums](https://discuss.elastic.co/c/elasticsearch), the [Elastic community](https://www.elastic.co/community)
+	
+-	**Supported architectures**: s390x
+
 
 # Supported tags and respective `Dockerfile` links
 
 -	[`7.9.1`](https://github.com/YBA-IBM/ElasticsearchZ/blob/main/Elasticsearch/Dockerfile)
 
-# Quick reference (cont.)
-
--	**Where to file issues**:  
-	For issues with Elasticsearch Docker Image or Elasticsearch: https://github.com/YBA-IBM/ElasticsearchZ/issues
-
--	**Supported architectures**: s390x
 
 # What is Elasticsearch?
 
@@ -95,7 +66,5 @@ See [Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elastics
 View [Elastic license information](https://github.com/elastic/elasticsearch/blob/6.4/licenses/ELASTIC-LICENSE.txt) and [Apache 2.0 license information](http://www.apache.org/licenses/LICENSE-2.0) for the software contained in this image.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
-
-Some additional license information which was able to be auto-detected might be found in [the `repo-info` repository's `elasticsearch/` directory](https://github.com/docker-library/repo-info/tree/master/repos/elasticsearch).
 
 As for any pre-built image usage, it is the image user's responsibility to ensure that any use of this image complies with any relevant licenses for all software contained within.
