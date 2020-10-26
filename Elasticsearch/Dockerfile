@@ -116,37 +116,29 @@ RUN chmod 0660 config/elasticsearch.yml config/log4j2.properties
 # Add entrypoint
 ################################################################################
 
-FROM s390x/ubuntu:18.04
+FROM quay.io/ibmz/ubuntu:18.04
 
 ENV ELASTIC_CONTAINER true
 
 COPY --from=builder /tini /tini
-	
-RUN apt-get update && apt-get install -y gzip bzip2 netcat
 
-RUN /usr/sbin/groupadd -g 1000 elasticsearch && \
-    /usr/sbin/useradd --uid 1000 --gid 1000 -G 0 -d /usr/share/elasticsearch elasticsearch
-    
 WORKDIR /usr/share/elasticsearch
+
 COPY --from=builder --chown=1000:0 /usr/share/elasticsearch /usr/share/elasticsearch
-
-RUN chmod 0775 /usr/share/elasticsearch && \
-    chgrp 0 /usr/share/elasticsearch
-
-# Replace OpenJDK's built-in CA certificate keystore with the one from the OS
-# vendor. The latter is superior in several ways.
-# REF: https://github.com/elastic/elasticsearch-docker/issues/171
-RUN ln -sf /etc/pki/ca-trust/extracted/java/cacerts /usr/share/elasticsearch/jdk/lib/security/cacerts
 
 ENV PATH /usr/share/elasticsearch/bin:$PATH
 
 COPY bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN chmod g=u /etc/passwd && \
-    chmod 0775 /usr/local/bin/docker-entrypoint.sh
-
-# Ensure that there are no files with setuid or setgid, in order to mitigate "stackclash" attacks.
-RUN find / -xdev -perm -4000 -exec chmod ug-s {} +
+RUN apt-get update && apt-get install -y gzip bzip2 netcat && \
+    /usr/sbin/groupadd -g 1000 elasticsearch && \
+    /usr/sbin/useradd --uid 1000 --gid 1000 -G 0 -d /usr/share/elasticsearch elasticsearch && \
+    chmod 0775 /usr/share/elasticsearch && \
+    chgrp 0 /usr/share/elasticsearch && \
+    ln -sf /etc/pki/ca-trust/extracted/java/cacerts /usr/share/elasticsearch/jdk/lib/security/cacerts && \
+    chmod g=u /etc/passwd && \
+    chmod 0775 /usr/local/bin/docker-entrypoint.sh && \ 
+    find / -xdev -perm -4000 -exec chmod ug-s {} +
 
 EXPOSE 9200 9300
 
