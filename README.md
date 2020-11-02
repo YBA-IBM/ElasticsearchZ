@@ -1,19 +1,7 @@
 # ElasticsearchZ
 
-# Quick reference
 
--	**Build Source**:  
-	[Linux-on-IBM-Z Dockerfile Examples Repo](https://github.com/linux-on-ibm-z/dockerfile-examples)
-  
-
--	**Where to get help**:  
-	the [Elasticsearch Discuss Forums](https://discuss.elastic.co/c/elasticsearch), the [Elastic community](https://www.elastic.co/community)
-	
--	**Supported architectures**: s390x
-
-
-# Supported tags and respective `Dockerfile` links
-
+# Tags
 -	[`7.9.1`](https://github.com/YBA-IBM/ElasticsearchZ/blob/main/Elasticsearch/Dockerfile)
 
 
