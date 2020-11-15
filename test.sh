@@ -8,7 +8,7 @@ export ANSI_RESET="\e[0m"
 
 echo -e "\n $ANSI_YELLOW *** FUNCTIONAL TEST(S) *** $ANSI_RESET \n"
 
-echo -e "$ANSI_YELLOW It can run a Java program: $ANSI_RESET"
+echo -e "$ANSI_YELLOW Activate Elasticsearch Container: $ANSI_RESET"
 docker network create somenetwork
 docker run --rm -d --name elasticsearch --net somenetwork -p 9400:9400 -p 9500:9500 -e "discovery.type=single-node" quay.io/ibmz/elasticsearch:7.9.1
 docker stop elasticsearch
