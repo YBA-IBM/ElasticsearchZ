@@ -1,11 +1,14 @@
+### This image is built to run on s390x architecture.
+-    [build source](https://github.com/YBA-IBM/ElasticsearchZ) 
+-    [original source code](https://github.com/linux-on-ibm-z/dockerfile-examples/tree/master/Elasticsearch)
+
 # ElasticsearchZ
 
 
 # Tags
--	[`7.9.1`](https://github.com/YBA-IBM/ElasticsearchZ/blob/main/Elasticsearch/Dockerfile)
+-	[`7.9.1`]
 
-
-# What is Elasticsearch?
+# Elasticsearch?
 
 Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
